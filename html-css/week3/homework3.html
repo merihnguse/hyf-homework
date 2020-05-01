@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework3a</title>
+    <link rel="stylesheet" href="homework3.css">
+</head>
+<body>
+    <!--step 1a start-->
+    <div class="container">
+        <div class="logo">
+           <div id="log">
+               <button>logo</button>
+           </div>
+           <div id="nav">
+            <button >Navigation</button>
+           </div>
+        </div>
+        <div class="header">
+            <h1>Sign up to yourcustomtailor.com</h1>
+            <p>we can't wait to help you improve your life-style and gain the attention from people around you!</p>
+           <p> Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy picking the best offers that match your preferemces and style. Every week we will send you a hand-picked selection-we just need to know a few details about you first...</p>
+        </div>
+        
+        <div>
+             <form action="homework3.html" method="get">
+                <div class="firstform">
+                    <h2>Step 1/4-tell us who you are?</h2>
+                    <h4>progress</h4>
+                    <progress value="5" max="100"></progress>
+                    <p>Nice to meet you. Let's spend a minute to get to know each other? Please enter the following:</p>
+                </div>
+                 <div class="form1">
+                     <div class="name">
+                        <label for="firstname">First name*</label>
+                        <input type="text" id="firstname" required>
+                        <label for="lastname">Last name*</label>
+                        <input type="text" id="lastname" required>
+                     </div>
+                  <div class="country">
+                    <label for="country">Country*</label>
+                    <input type="text" id="country" required> 
+                  </div>
+                  <div class="street">
+                    <label for="streetadress">Street adress*</label>
+                    <input type="text" id="streetadress" required>
+                   <label for="postcode">Post code*</label>
+                   <input type="number" min="4" max="4" id="postcode" required>
+                  </div>
+                 </div>
+                <div class="form2">
+                    <div class="prof">
+                         <label>Profile description</label>
+                        <p> <em>Please provide a short description of yourself to be displayed on our social community pages</em></p>
+                    </div>
+                     <textarea name="textarea" maxlength="500" ></textarea> 
+                    </div>
+                <p>Use the same adresse for biling and shoping? Uncheck below to fill out a separate shipping adress.</p>
+                <div class="form3">
+                    <div class="shipping">
+                        <label for="shippingadress"> Shipping adress</label>
+                        <input type="checkbox" id="shippingadress" checked required>
+                    </div>
+                    <div class="but">
+                        <button>Next step</button>
+                    </div>
+                    
+                </div>
+                <!--step 1a ends-->
+                
+             </form>
+        </div>
+
+    </div>
+    
+</body>
+</html>

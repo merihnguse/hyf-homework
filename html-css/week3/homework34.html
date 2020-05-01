@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework34</title>
+    <link rel="stylesheet" href="homework3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div id="log">
+                <button>logo</button>
+            </div>
+            <div id="nav">
+             <button>Navigation</button>
+            </div>
+         </div>
+    <h1>Sign up to yourcustomtailor.com</h1>
+    <h3>Step 4/4-Payment</h3>
+        <form action="homework34.html" method="get">
+            <div class="step4">
+            <h4>progress</h4>
+            <progress value="90" max="100"></progress>
+            <p>Please fill in the paiment data.</p>
+            </div>
+            <div class="step4a">
+                <div class="namecard">
+                    <label for="nameoncard">Name on card</label>
+                    <input type="text" id="nameoncard" required>
+                </div>
+                <div class="cardtype">
+                    <label for="cardtype">Card type</label>
+                    <input type="text" id="cardtype" required>
+                </div>
+                <div class="creditcard">
+                    <label for="creditcard">Credit card number</label>
+                    <input type="number" minlength="16" maxlength="16" autocomplete="off" id="creditcard" value="0000 0000 0000 0000" required>
+                    <label for="firstname">First name</label>
+                    <input type="text" id="firstname" required>
+                </div>
+                <div class="expiry">
+                    <label for="expirymonth">Expiry month</label>
+                    <input type="number" autocomplete="off" id="expirymonth" required>
+                    <label for="expiryyear">Expiry year</label>
+                    <input type="number" min="2020" max="2050"  autocomplete="off" id="expiryyear" required>
+                </div>
+                <div class="cvv">
+                    <label for="cvv" >CVV</label>
+                    <input type="number" max="3" min="3" id="cvv" autocomplete="off" placeholder="..." required>
+                </div>
+            </div>
+            <div class="butt">
+                <button>Next Step</button>
+            </div>
+        </form>
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+body{
+    width: 70%;
+    font-size: 1.1rem;
+    margin: 0 auto;
+}
+.container{
+    margin:0 auto;
+    border: #A9A9A9 1px solid;
+    padding-left: 2rem;
+}
+.logo{
+    display: flex;
+    padding-top: 1.2rem;
+}
+#log{
+    width: 30%;
+}
+#log button{
+    height: 4rem;
+    width: 6rem;
+}
+#nav{
+    width: 70%;
+    padding-left: 22rem;
+}
+#nav button{
+    height: 4rem;
+    width: 20rem;
+}
+.header p{
+    padding-right: 13rem;
+}
+.firstform h4{
+    margin-bottom: 0;
+}
+.firstform progress{
+    width: 98%;
+    height: 2.3rem;
+}
+.form1{
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+}
+.form1 #shipping input{
+    width: 8px;
+    margin-left: 0.6rem;
+}
+.form1 .name{
+    padding-left: 4rem;
+    margin-bottom: 1.2rem;
+}
+.form1 .country{
+    padding-left: 5rem;
+    margin-bottom: 1.2rem;
+}
+.form1 .street{
+    padding-left: 2.57rem;
+}
+.form .street,select{
+    width: 10rem;
+    height: 2rem;
+}
+.form1 input{
+    padding-left: 2rem;
+    height: 2rem;
+    width: 12rem;
+}
+.form2{
+     width: 100%;
+    display: flex;
+    margin-bottom: 2rem;
+    margin-top: 2.3rem;
+}
+ .prof{
+    width: 25%;
+    padding-top: 1.3rem;
+}
+.form2 .prof p{
+    font-size: 0.75rem;
+}
+.form2,textarea{
+    width: 75%;
+    resize: none;
+    height: 6.5rem;
+}
+.form3{
+    display: flex;
+    padding-bottom: 1.3rem;
+}
+.form3 #shipping,input{
+    width: 3rem;
+    height: 2rem;
+    margin-left: 0.6rem;
+}
+ .but{
+    width: 70%;
+    text-align: right;
+    }
+.but button{
+    height: 4rem;
+    width: 35%;
+    color:	#696969;
+    font-size: 1.7rem;
+    direction: rtl;
+}
+ /*step 1b start*/
+ .form1 #ship{
+     margin-top: auto;
+     margin-bottom: 3rem;
+     height: 2rem;
+ }
+ #shipingadress{
+    height: 2rem;
+ }
+ /*step 1b start*/
+    /*step 2 start*/
+    .step2a{
+        color: #000000;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .step2a h3{
+        margin-bottom: 0;
+    }
+    .step2a progress{
+        width: 95%;
+        height: 2.3rem;
+        margin-bottom: 1.3rem;
+    }
+    .step2b{
+        padding-left: 5.6rem;
+        margin-bottom: 0.8rem;
+    }
+    .step2 input{
+        width: 12rem;
+        padding-left: 1rem;
+     }
+     .step2c{
+         padding-left: 4rem;
+         margin-bottom: 0.8rem;
+          }
+     .step2d{
+         padding-left: 0.1rem;
+     }
+    step2e{
+        margin-top: 1.3rem;
+        margin-bottom: 6rem;
+    }
+    #but{
+        margin-top: 6rem;
+        margin-bottom: 2rem;
+        padding-right: 1rem;
+        text-align: right;
+        
+    }
+  #but button{
+            height: 4rem;
+            width: 12rem;
+            color:	#696969;
+            justify-content: flex-end;
+        }
+    
+    /*step 3 strats*/
+    .step3 h3{
+        margin-top: 0.3rem;
+        padding-bottom: 0;
+    }
+    .step3 progress{
+        width: 98%;
+        height: 2.3rem;
+    }
+    .step3a{
+        padding-left: 2rem;
+    }
+    .step3aa{
+        margin-bottom: 1.4rem;
+        padding-left: 3.8rem;
+    }
+    .step3ab{
+        padding-left: 2rem;
+        margin-bottom: 1.4rem;
+    }
+    .step3ac{
+        padding-left: 2.7rem;
+        margin-bottom: 1.4rem;
+    }
+    .step3b img{
+        width: 8rem;
+        height: 12rem;
+    }
+    .checkbox{
+        padding-left: 5rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    /*step 4 strats*/
+    .step4 progress{
+        width: 98%;
+        height: 2.3rem;
+    }
+    .step4 h4{
+        margin-top: 0.3rem;
+        padding-bottom: 0;
+    }
+    .step4a{
+        margin-top: 1.3rem;
+        margin-bottom: 1.4rem;
+    }
+    .namecard{
+        padding-left: 4rem;
+        margin-bottom: 1.2rem;
+    }
+    .namecard input{
+        width: 13rem;
+    }
+    .cardtype{
+        padding-left: 6.41rem;
+        margin-bottom: 1.2rem;
+    }
+    .creditcard{
+        padding-left: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+    .creditcard input{
+        width: 13rem;
+    }
+    .expiry{
+        padding-left: 3.6rem;
+        margin-bottom: 1.2rem;
+    }
+    .cvv{
+        padding-left: 7.3rem;
+        margin-bottom: 1.2rem;
+    }
+    .butt{
+        width: 70%;
+        text-align: right;
+        margin-bottom: 7rem;
+        }
+    .butt button{
+        height: 4rem;
+        width: 35%;
+        color:	#696969;
+        font-size: 1.7rem;
+        direction: rtl;
+        margin-bottom: 7rem;
+        
+    }
+    
