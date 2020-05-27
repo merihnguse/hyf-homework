@@ -3,7 +3,7 @@ const firstname = 'Hewan';
 const surname = 'Adam';
 
 // declaration of function
-function getFullName(firstname, surname, useFormalName) {
+function getFullName(firstname, surname, useFormalName = true) {
 	if (useFormalName === true) {
 		return 'Lord' + ' ' + firstname + ' ' + surname;
 	} else {

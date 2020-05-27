@@ -1,5 +1,5 @@
 //creating a function
-function event(Day) {
+function event(days) {
 	const myDayArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 	//  random number creating
 	const randomNumber = Math.floor(Math.random() * 5) + 2;
