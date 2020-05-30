@@ -10,7 +10,7 @@ const seriesDurations = [
 		title: 'Revolution',
 		days: 1,
 		hours: 5,
-		minutes: 24,
+		minutes: 20,
 	},
 	{
 		title: 'Lost',

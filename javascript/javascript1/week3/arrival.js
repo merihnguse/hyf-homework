@@ -1,6 +1,6 @@
 const travelInformation = {
 	speed: 60,
-	destinationDistance: 282,
+	destinationDistance: 475,
 };
 const travelTime = time(travelInformation);
 let hours = Math.floor(travelTime);

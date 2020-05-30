@@ -18,7 +18,7 @@ function getNote(id) {
 		if (notes[i].id === id) {
 			return notes[i];
 		} else {
-			return 'error';
+			return 'error!';
 		}
 	}
 }
