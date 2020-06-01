@@ -20,26 +20,15 @@ const seriesDurations = [
 	},
 ];
 // function declaration
-function logOutSeriesText(timeTakes) {
-	let totalDaysTook;
-	let totalHoursTook;
-	let totalMinutesTook;
-	let totalSeriesTimeTook;
-	let totalTimeTook = 0;
-	let lifespan = 80;
-	const numberDaysInYear = 365;
-	const numberHoursInDay = 24;
-	const numberMinutesInHour = 60;
-
-	for (let i = 0; i < timeTakes.length; i++) {
-		totalDaysTook = (timeTakes[i].days / (numberDaysInYear * lifespan)) * 100;
-		totalHoursTook = (timeTakes[i].hours / (numberDaysInYear * lifespan * numberHoursInDay)) * 100;
-		totalMinutesTook =
-			(timeTakes[i].minutes / (numberDaysInYear * lifespan * numberHoursInDay * numberMinutesInHour)) * 100;
-		totalSeriesTimeTook = totalDaysTook + totalHoursTook + totalMinutesTook;
-		console.log(timeTakes[i].title + ' took ' + totalSeriesTimeTook.toFixed(4) + ' % 0f my life');
-		totalTimeTook += totalSeriesTimeTook;
+function logOutSeriesText(seriesTimeTakes) {
+	const lifespan = 80 * 365 * 24 * 60; //in minuttes
+	let total = 0;
+	for (let i = 0; i < seriesTimeTakes.length; i++) {
+		const seriesTimeTake = seriesTimeTakes[i].days * 24 * 60 + seriesTimeTakes[i].hours * 60;
+		const percent = (seriesTimeTake / lifespan) * 100;
+		total += percent;
+		console.log(seriesTimeTakes[i].title + ' took ' + total.toFixed(4) + ' % 0f my life');
 	}
-	console.log('Total I have spent ' + totalTimeTook.toFixed(4) + ' % of my life');
+	console.log('Total I have spent ' + total.toFixed(4) + ' % of my life');
 }
 logOutSeriesText(seriesDurations);
