@@ -1,5 +1,5 @@
 function getReply(order) {
-	if (order.includes('Hello my name')) {
+	if (order.includes('What is your name')) {
 		return 'Nice to meet you Benjamin';
 	} else if (order.startsWith('Adding fishing to my todo')) {
 		return 'fishing add to your todo';
