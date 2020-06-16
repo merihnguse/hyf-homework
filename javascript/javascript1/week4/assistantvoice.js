@@ -1,8 +1,13 @@
+let name = 'a mentioned name';
+let givingName = '';
+let todo = [];
+
 function getReply(order) {
-	if (order.includes('What is your name')) {
-		return 'Nice to meet you Benjamin';
-	} else if (order.startsWith('Adding fishing to my todo')) {
-		return 'fishing add to your todo';
+	//let name;
+	if (order.includes('hello my name is')) {
+		name = order.replace('hello my name is', '');
+		return `Nice to meet you ${name}`;
+	}
 	} else if (order === 'Remove fishing from my todo') {
 		return 'Removed fishing from your todo';
 	} else if (order === 'What is on my todo') {
