@@ -29,5 +29,4 @@ console.log(getReply('Adding fishing to my todo'));
 console.log(getReply('Remove fishing from my todo'));
 console.log(getReply('What is on my todo'));
 console.log(getReply('What day is today?'));
-//console.log(getReply('Timer is done'));
 setTimeout(displayMessage, 10000);
