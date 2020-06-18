@@ -1,19 +1,14 @@
-let name = 'a mentioned name';
-let givingName = '';
 let todo = [];
 
 function getReply(order) {
-	//let name;
-	if (order.includes('hello my name is')) {
+	let name;
+
+	if (order.includes('hello my name ')) {
 		name = order.replace('hello my name is', '');
 		return `Nice to meet you ${name}`;
-	}
-	if (order.includes('what is your name?') && name != givingName) {
-		let name;
-		let givingName;
-		console.log('Who are you?');
-	} else if (order.includes('what is your name?') && name === givingName) {
-		console.log('I am ' + givingName);
+	} else if (order.startsWith('What is my name')) {
+		name = 'Abel';
+		return 'Your name is ' + name;
 	}
 	if (order.startsWith('Adding') && order.endsWith('todo')) {
 		const todos = order.replace('Adding', '').replace('todo', '');
@@ -41,7 +36,7 @@ function displayMessage() {
 
 console.log(getReply('hello my name is Merih'));
 console.log(getReply('hello my name is'));
-console.log(getReply('What is your name?'));
+console.log(getReply('What is my name?'));
 console.log(getReply('Adding fishing to my todo'));
 console.log(getReply('Removing fishing from my todo'));
 console.log(getReply('What day is today?'));
