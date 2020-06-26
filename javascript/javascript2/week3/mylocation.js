@@ -1,6 +1,7 @@
-const buttton = document.querySelector('button');
+const button = document.querySelector('button');
+
 const myGeoLocation = () => {
-	if (navigator.geolocation === success) {
+	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(success);
 	} else {
 		return 'Not found';
@@ -8,8 +9,8 @@ const myGeoLocation = () => {
 };
 
 function success(position) {
-	document.getElementById('text').innerHTML =
-		'This is latitude: ' + position.coords.latitude + '<br> Longitude will be: ' + position.coords.longitude;
+	document.getElementById('lat').innerHTML = 'This is latitude: ' + position.coords.latitude;
+	document.getElementById('long').innerHTML = 'Longitude will be: ' + position.coords.longitude;
 }
 
-button.addEventListener('click', myGeoLocation);
+button.addEventListener('click', success);
