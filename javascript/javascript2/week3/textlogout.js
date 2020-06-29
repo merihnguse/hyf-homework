@@ -4,8 +4,8 @@ const logout = () => {
 	console.log('called after 2.5 seconds');
 };
 
-const Click = () => {
+const logText = () => {
 	setTimeout(logout, 2500);
 };
 
-buttton.addEventListener('click', Click);
+buttton.addEventListener('click', logText);

@@ -8,11 +8,11 @@ const myGeoLocation = () => {
 	}
 };
 
-function success(position) {
+function locationDisplayed(position) {
 	const data = 'This is latitude: ' + position.coords.latitude;
 	const datatype = 'Longitude will be: ' + position.coords.longitude;
 	document.getElementById('lat').innerHTML = data;
 	document.getElementById('long').innerHTML = datatype;
 }
 
-button.addEventListener('click', success);
+button.addEventListener('click', locationDisplayed);
