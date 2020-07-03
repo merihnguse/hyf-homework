@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document Weather</title>
+	</head>
+
+	<body>
+		<button id="getText">Get Text</button>
+		<button id="weatherJson">City Weather</button>
+		<!--<input type="text" id="weatherJson" />-->
+		<div id="weather">
+			<p id="description"></p>
+			<h1 id="temp"></h1>
+			<p id="location"></p>
+			<p id="wind"></p>
+			<p id="cloud"></p>
+			<p id="country"></p>
+		</div>
+
+		<script>
+			document.getElementById('getText').addEventListener('click', getText);
+			document.getElementById('weatherJson').addEventListener('click', weatherJson);
+			function getText() {
+				fetch('nameCity.txt')
+					.then(function (res) {
+						return res.text();
+					})
+					.then(function (data) {
+						document.getElementById('output').innerHTML = data;
+					})
+					.catch((err) => console.log(err));
+			}
+
+			function weatherJson() {
+				fetch('https://api.openweathermap.org/data/2.5/weather?q=oslo&appid=e7001dfab99859e00635c23c7b001d6c')
+					.then((res) => res.json())
+					.then((data) => {
+						tempWeather(data);
+					});
+			}
+
+			function tempWeather(city) {
+				let celcius = Math.round(parseFloat(city.main.temp) - 273.15);
+				let fahrenheit = Math.round((parseFloat(city.main.temp) - 273.15) * 1.8 + 32);
+				let description = city.weather[0].description;
+				let wind = city.wind.speed;
+				let cloud = city.clouds.all;
+				let country = city.sys.country;
+
+				document.getElementById('location').innerHTML = city.name;
+				document.getElementById('description').innerHTML = description;
+				document.getElementById('temp').innerHTML = celcius + '&deg;';
+				document.getElementById('wind').innerHTML = wind;
+				document.getElementById('cloud').innerHTML = cloud;
+				document.getElementById('location').innerHTML = city.name;
+				document.getElementById('country').innerHTML = country;
+			}
+		</script>
+	</body>
+</html>
