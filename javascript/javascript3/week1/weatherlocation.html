@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document Weather</title>
+	</head>
+
+	<body>
+		<header>
+			<input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..." />
+		</header>
+		<section class="location">
+			<div class="city">Keren, Eritrea</div>
+		</section>
+		<div class="current">
+			<div class="temp">15<span>°c</span></div>
+			<div class="weather">Sunny</div>
+		</div>
+
+		<script>
+			const searchbox = document.querySelector('.search-box');
+			searchbox.addEventListener('keypress', setQuery);
+			function setQuery(evt) {
+				if (evt.keyCode == 13) {
+					getResults(searchbox.value);
+				}
+			}
+			function getResults(query) {
+				fetch(
+					`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=e7001dfab99859e00635c23c7b001d6c`
+				)
+					.then((weather) => {
+						return weather.json();
+					})
+					.then(tempWeathers);
+			}
+
+			function tempWeathers(weather) {
+				let city = document.querySelector('.location .city');
+				city.innerText = `${weather.name}, ${weather.sys.country}`;
+
+				let temp = document.querySelector('.current .temp');
+				temp.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`;
+				let weather_el = document.querySelector('.current .weather');
+				weather_el.innerText = weather.weather[0].main;
+			}
+		</script>
+	</body>
+</html>
