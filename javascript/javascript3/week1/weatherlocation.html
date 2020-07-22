@@ -7,34 +7,28 @@
 	</head>
 
 	<body>
-		<button id="getText">Get Text</button>
-		<button id="weatherJson">City Weather</button>
-		<!--<input type="text" id="weatherJson" />-->
+		<button id="weatherJson">Click Weather</button>
+		<input type="text" id="weatherJson" placeholder="city name" />
+
 		<div id="weather">
 			<p id="description"></p>
 			<h1 id="temp"></h1>
-			<p id="location"></p>
 			<p id="wind"></p>
 			<p id="cloud"></p>
 			<p id="country"></p>
+			<p id="sunrise"></p>
+			<p id="sunset"></p>
 		</div>
 
 		<script>
-			document.getElementById('getText').addEventListener('click', getText);
 			document.getElementById('weatherJson').addEventListener('click', weatherJson);
-			function getText() {
-				fetch('nameCity.txt')
-					.then(function (res) {
-						return res.text();
-					})
-					.then(function (data) {
-						document.getElementById('output').innerHTML = data;
-					})
-					.catch((err) => console.log(err));
-			}
-
 			function weatherJson() {
-				fetch('https://api.openweathermap.org/data/2.5/weather?q=oslo&appid=e7001dfab99859e00635c23c7b001d6c')
+				const cityName = input.value();
+				if (cityName !== '') {
+				}
+				fetch(
+					`https://api.openweathermap.org/data/2.5/weather?q=oslo&units=metric&appid=e7001dfab99859e00635c23c7b001d6c`
+				)
 					.then((res) => res.json())
 					.then((data) => {
 						tempWeather(data);
@@ -54,6 +48,8 @@
 				document.getElementById('temp').innerHTML = celcius + '&deg;';
 				document.getElementById('wind').innerHTML = wind;
 				document.getElementById('cloud').innerHTML = cloud;
+				document.getElementById('sunrise').innerHTML = sunrise;
+				document.getElementById('sunset').innerHTML = sunset;
 				document.getElementById('location').innerHTML = city.name;
 				document.getElementById('country').innerHTML = country;
 			}
