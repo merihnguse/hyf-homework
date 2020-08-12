@@ -1,0 +1,32 @@
+[
+	{
+		"name": "Ronaldo",
+		"age": 41,
+		"shirtNumber": 9,
+		"country": "Brazil"
+	},
+	{
+		"name": "Cluvert",
+		"age": 44,
+		"shirtNumber": 10,
+		"country": "Netherlands"
+	},
+	{
+		"name": "Zidan",
+		"age": 45,
+		"shirtNumber": 5,
+		"country": "France"
+	},
+	{
+		"name": "Ocacha",
+		"age": 48,
+		"shirtNumber": 11,
+		"country": "Nigeria"
+	},
+	{
+		"name": "hakan",
+		"age": 54,
+		"shirtNumber": 12,
+		"country": "Turkey"
+	}
+]
